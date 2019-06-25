@@ -1,4 +1,5 @@
 echo off
-set NODE_ENV=gpii.config.all.development.dr.production
+set NODE_TLS_REJECT_UNAUTHORIZED=0
+set GPII_CLOUD_URL=https://flowmanager.jj.dev.gcp.gpii.net
 cd windows
-start /min ..\node.exe gpii.js
+start /min morphic-app.exe
