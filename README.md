@@ -14,9 +14,9 @@ Make sure MSBuild and the WiX folder are in the path.
 - Edit line 10 of [`setup/build.cmd`](https://github.com/GPII/gpii-wix-installer/blob/master/setup/build.cmd) and replace `C:\projects\gpii\windows` with the path of your local GPII/windows repository (**no** trailing backslash)
 - Run [`setup/build.cmd`](https://github.com/GPII/gpii-wix-installer/blob/master/setup/build.cmd)
 
-Staging makes a private copy of the GPII/windows repository inside the `staging` folder and uses that for building the installer. Any files not needed (eg Git and Vagrant related folders) are excluded. 
+Staging makes a private copy of the GPII/windows repository inside the `staging` folder and uses that for building the installer. Any files not needed (eg Git and Vagrant related folders) are excluded.
 
-After running `build.cmd`, an MSI file can be found in the `output` folder.  
+After running `build.cmd`, an MSI file can be found in the `output` folder.
 Whenever there are changes to the local GPII/windows repository, rerun `build.cmd` to make a new installer.
 
 ## Unattended installation
@@ -35,7 +35,7 @@ To silently uninstall:
 msiexec /qn /x GPII.msi
 ```
 ### Customizing
-You can pass a number of property key/values to the installer to customize its behavior.  
+You can pass a number of property key/values to the installer to customize its behavior.
 For example, to perform an unattended installation to `C:\GPII`:
 ```
 msiexec /qn /i GPII.msi INSTALLFOLDER=C:\GPII
@@ -49,7 +49,7 @@ The list of possible properties include:
 | Name | Value | Description |
 | ---- | ------ | ----------- |
 | INSTALLFOLDER | A folder name<br /><br />**Default:** <code>C:\Program&nbsp;Files\GPII</code> or <code>C:\Program&nbsp;Files&nbsp;(x86)\GPII</code> | The installation folder |
-| ADDLOCAL | Comma (,) separated list<br/></br/>Possible values:<br/><ul><li>`GPIIFeature`</li><li>`VCRedist`</li><li>`ALL` **(Default)**</li></ul> | The GPII features that will get installed.<br /><br/>It is advisable to always include `GPIIFeature` (the main GPII platform) and `VCRedist` (the Visual C++ Redistributable Package). |
+| ADDLOCAL | Comma (,) separated list<br/></br/>Possible values:<br/><ul><li>`GPIIFeature`</li><li>`VCRedist`</li><li>`ALL` **(Default)**</li></ul> | The GPII features that will get installed.<br /><br/>It is advisable to always include `GPIIFeature` (the main GPII platform) and `VCRedist` (the Visual C++ Redistributable Package)|
 | SHORTCUTS | `0` or `1` **(Default)** | Whether or not to create any desktop and start menu shortcuts |
 | DESKTOP_SHORTCUTS | `0` or `1` **(Default)** | Whether or not to create any desktop shortcuts |
 | START_MENU_SHORTCUTS | `0` or `1` **(Default)** | Whether or not to create any start menu shortcuts |
